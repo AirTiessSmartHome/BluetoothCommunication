@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/isi"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/txtTempr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature = ????"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:visibility="visible"
+        android:layout_below="@+id/swLED2"
+        android:autoText="false"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:password="false"
+        android:nestedScrollingEnabled="false"
+        android:maxLines="100"
+        android:textIsSelectable="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:editable="true"
+        android:layout_below="@+id/txtTempr"
+        android:layout_above="@+id/txtMsgLength"
+        android:width="100dp"
+        android:layout_alignParentEnd="false"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/txtMsgLength"
+        android:layout_alignParentBottom="true"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtMsgLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtMsg"
+        android:textSize="15sp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 1 "
+        android:id="@+id/swLED1"
+        android:checked="false"
+        android:elegantTextHeight="false"
+        android:textSize="25dp"
+        android:layout_alignParentStart="true"
+        android:switchMinWidth="60dp"
+        android:layout_alignTop="@+id/btnLED1"
+        android:layout_alignBottom="@+id/btnLED1" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 2 "
+        android:id="@+id/swLED2"
+        android:checked="false"
+        android:elegantTextHeight="false"
+        android:textSize="25dp"
+        android:layout_alignParentStart="true"
+        android:switchMinWidth="60dp"
+        android:layout_alignTop="@+id/btnLED2"
+        android:layout_alignBottom="@+id/btnLED2" />
+
+    <Button
+        android:id="@+id/btnLED1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 1 Sync"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnLED2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 2 Sync"
+        android:layout_below="@+id/btnLED1"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_above="@+id/btnHide"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtTempr"
+        android:layout_toEndOf="@+id/swLED2"
+        android:layout_above="@+id/btnClear"
+        android:weightSum="1"
+        android:layout_toRightOf="@+id/txtLog"
+        android:layout_alignRight="@+id/btnHide">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.3">
+
+            <ToggleButton
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="New ToggleButton"
+                android:id="@+id/tbtnTV"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:checked="false"
+                android:layout_row="0"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.35">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Channel\n+"
+                android:id="@+id/btnChUp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Vol\nUp"
+                android:id="@+id/btnVolUp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.35">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Channel\n-"
+                android:id="@+id/btnChDown"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Vol\nDown"
+                android:id="@+id/btnVolDown"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

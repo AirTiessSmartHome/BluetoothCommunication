@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">simple bluetooth</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="none_paired">NP</string>
+    <string name="action_settings">Settings</string>
+</resources>

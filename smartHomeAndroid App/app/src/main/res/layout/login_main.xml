@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scaler0"
+        android:id="@+id/btnScaler0"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="0dp"
+        android:clickable="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password:"
+        android:id="@+id/txtPassword"
+        android:layout_below="@+id/txtUsername"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:clickable="false"
+        android:editable="true"
+        android:layout_alignParentEnd="false"
+        android:gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Username:"
+        android:id="@+id/txtUsername"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_below="@+id/analogClock"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to \n Smart Home"
+        android:id="@+id/txtWelcome"
+        android:lines="2"
+        android:autoText="true"
+        android:gravity="top|center_horizontal"
+        android:textIsSelectable="false"
+        android:layout_alignBottom="@+id/analogClock"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnScaler0"
+        android:layout_toRightOf="@+id/analogClock"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/btnLogin"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="0dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:height="120dp"
+        android:elegantTextHeight="true"
+        android:textAlignment="gravity"
+        android:visibility="visible" />
+
+    <AnalogClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/analogClock"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:textAlignment="center"
+        android:editable="false"
+        android:gravity="center"
+        android:focusableInTouchMode="false"
+        android:textSize="30dp"
+        android:textIsSelectable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/analogClock"
+        android:layout_above="@+id/txtWelcome"
+        android:elegantTextHeight="true"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etxtUsername"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtUsername"
+        android:maxLines="1"
+        android:text="kaan"
+        android:layout_alignTop="@+id/txtUsername"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etxtPassword"
+        android:layout_alignTop="@+id/txtPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/etxtUsername"
+        android:text="12345"
+        android:layout_centerVertical="true"
+        android:visibility="visible" />
+
+</RelativeLayout>
